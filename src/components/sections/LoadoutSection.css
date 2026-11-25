@@ -311,8 +311,54 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 640px) {
+  .aw-loadout-schematic {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .aw-loadout-col {
+    gap: 10px;
+  }
+  .aw-cluster-card {
+    padding: 11px 12px;
+  }
+  .aw-cluster-card__head {
+    margin-bottom: 8px;
+    padding-bottom: 5px;
+  }
+  .aw-cluster-card__title {
+    font-size: 0.96rem;
+  }
+  .aw-cluster-card__sub {
+    font-size: 0.58rem;
+  }
   .aw-node-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .aw-tech-node {
+    padding: 8px 9px;
+    gap: 5px;
+  }
+  .aw-tech-node__name {
+    font-size: 0.86rem;
+    line-height: 1.15;
+  }
+  .aw-inspector__body {
+    padding: 12px 14px;
+    gap: 6px;
+  }
+  .aw-inspector__name {
+    font-size: 1.25rem;
+  }
+  .aw-inspector__desc {
+    font-size: 0.84rem;
+  }
+  .aw-inspector__milestones {
+    gap: 8px;
+    font-size: 0.62rem;
+  }
+  .aw-inspector__cta {
+    padding: 11px 14px;
   }
 }

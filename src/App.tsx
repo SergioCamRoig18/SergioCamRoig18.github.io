@@ -122,6 +122,13 @@ export function App() {
         },
       },
       {
+        id: 'open-cv',
+        label: lang === 'es' ? 'Abrir CV en PDF (ES)' : 'Open Resume PDF (EN)',
+        category: 'COMMS',
+        keywords: 'cv resume pdf curriculum descargar download',
+        run: () => window.open(PROFILE_DATA.links.cv[lang], '_blank', 'noopener,noreferrer'),
+      },
+      {
         id: 'open-github',
         label: 'GitHub (@SergioCamRoig18)',
         category: 'EXTERNAL',

@@ -1,4 +1,4 @@
-import { Check, Copy, ExternalLink, Github, Linkedin, Mail } from 'lucide-react';
+import { Check, Copy, ExternalLink, FileDown, Github, Linkedin, Mail } from 'lucide-react';
 import { useState } from 'react';
 import { PROFILE_DATA } from '../../data/profile';
 import type { Lang } from '../../types/hud';
@@ -109,6 +109,19 @@ export function CommsSection({ lang }: CommsSectionProps) {
                 <span>LINKEDIN</span>
               </span>
               <ExternalLink size={15} color="var(--aw-text-muted)" />
+            </a>
+
+            <a
+              href={PROFILE_DATA.links.cv[lang]}
+              target="_blank"
+              rel="noreferrer"
+              className="aw-interactive aw-comms-link-tile aw-comms-link-tile--full"
+            >
+              <span className="aw-comms-link-tile__left aw-accent-on-focus">
+                <FileDown size={18} />
+                <span>{lang === 'es' ? 'DESCARGAR CV (PDF · ES)' : 'DOWNLOAD RESUME (PDF · EN)'}</span>
+              </span>
+              <ExternalLink size={15} color="var(--aw-yellow)" />
             </a>
           </div>
         </div>

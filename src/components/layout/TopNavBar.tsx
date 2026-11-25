@@ -1,4 +1,4 @@
-import { Menu, Search, X } from 'lucide-react';
+import { FileDown, Menu, Search, X } from 'lucide-react';
 import { useState } from 'react';
 import { PROFILE_DATA } from '../../data/profile';
 import type { Lang, SectionId } from '../../types/hud';
@@ -121,6 +121,17 @@ export function TopNavBar({
               ES
             </button>
           </div>
+
+          <a
+            href={PROFILE_DATA.links.cv[lang]}
+            target="_blank"
+            rel="noreferrer"
+            className="aw-topbar__icon-btn aw-topbar__cv-btn"
+            title={lang === 'es' ? 'Abrir CV en PDF (ES)' : 'Open Resume PDF (EN)'}
+          >
+            <FileDown size={14} />
+            <span>CV</span>
+          </a>
 
           <button
             type="button"

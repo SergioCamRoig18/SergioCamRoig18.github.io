@@ -348,8 +348,56 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
+  .aw-telemetry-wrap {
+    gap: 10px;
+  }
+  .aw-operator-banner {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+  .aw-operator-banner__avatar {
+    width: 40px;
+    height: 40px;
+  }
+  .aw-operator-banner__name {
+    font-size: 1.22rem;
+  }
+  .aw-operator-banner__sub {
+    font-size: 0.66rem;
+  }
   .aw-kpi-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+  }
+  .aw-kpi-tile {
+    padding: 9px 10px;
+    gap: 2px;
+  }
+  .aw-kpi-tile__label {
+    font-size: 0.56rem;
+    letter-spacing: 0.04em;
+  }
+  .aw-kpi-tile__value {
+    font-size: 1.42rem;
+  }
+  .aw-telemetry-split {
+    gap: 10px;
+  }
+  .aw-telemetry-card {
+    padding: 12px 14px;
+    gap: 8px;
+  }
+  .aw-lang-list {
+    gap: 6px;
+  }
+  .aw-lang-item {
+    padding: 7px 9px;
+  }
+  .aw-weekly-list {
+    gap: 6px;
+  }
+  .aw-telemetry-footnote {
+    font-size: 0.64rem;
   }
 }

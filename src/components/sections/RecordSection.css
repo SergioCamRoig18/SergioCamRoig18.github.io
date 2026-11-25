@@ -284,25 +284,41 @@
 }
 
 @media (max-width: 760px) {
+  .aw-record-layout {
+    gap: 12px;
+  }
+  .aw-degree-span__card {
+    padding: 13px 14px;
+    gap: 7px;
+  }
+  .aw-degree-span__title {
+    font-size: 1.22rem;
+  }
+  .aw-degree-span__desc {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
   .aw-record-rail {
-    padding-left: 22px;
+    padding-left: 18px;
+    gap: 10px;
   }
   .aw-record-rail::before {
     left: 4px;
   }
   .aw-record-entry {
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
   }
   .aw-record-date {
     position: static;
     transform: none;
     width: auto;
     text-align: left;
+    font-size: 0.66rem;
   }
   .aw-record-dot {
-    left: -22px;
-    top: 8px;
+    left: -18px;
+    top: 7px;
     transform: none;
   }
   .aw-record-card {
@@ -310,5 +326,19 @@
   }
   .aw-record-card__icon {
     display: none;
+  }
+  .aw-record-card__body {
+    padding: 11px 13px;
+    gap: 4px;
+  }
+  .aw-record-card__title {
+    font-size: 1.12rem;
+  }
+  .aw-record-card__sub {
+    font-size: 0.66rem;
+  }
+  .aw-record-card__desc {
+    font-size: 0.82rem;
+    line-height: 1.44;
   }
 }

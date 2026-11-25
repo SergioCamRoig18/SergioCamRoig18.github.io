@@ -18,6 +18,10 @@ export const PROFILE_DATA = {
   links: {
     github: 'https://github.com/SergioCamRoig18',
     linkedin: 'https://www.linkedin.com/in/sergio-camacho-roig-343550318/',
+    cv: {
+      en: '/cv/Sergio-Camacho-Roig-CV-EN.pdf',
+      es: '/cv/Sergio-Camacho-Roig-CV-ES.pdf',
+    },
   },
   greeting: {
     en: "HELLO, I'M",

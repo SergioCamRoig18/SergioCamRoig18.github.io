@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, ExternalLink, FileDown, Github, Linkedin, Mail } from 'lucide-react';
 import { PROFILE_DATA } from '../../data/profile';
 import type { HudSnapshot, Lang, SectionId } from '../../types/hud';
 import './ProfileSection.css';
@@ -53,6 +53,16 @@ export function ProfileSection({ lang, snapshot, onJumpSection }: ProfileSection
               <span>{lang === 'es' ? 'VER PROYECTOS' : 'VIEW PROJECTS'}</span>
               <ArrowRight size={15} />
             </button>
+
+            <a
+              href={PROFILE_DATA.links.cv[lang]}
+              target="_blank"
+              rel="noreferrer"
+              className="aw-btn"
+            >
+              <FileDown size={15} />
+              <span>{lang === 'es' ? 'CV (PDF)' : 'RESUME (PDF)'}</span>
+            </a>
 
             <button
               type="button"

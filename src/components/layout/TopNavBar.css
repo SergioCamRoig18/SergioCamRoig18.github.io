@@ -186,6 +186,11 @@
   background: var(--aw-yellow-wash);
 }
 
+.aw-topbar__cv-btn {
+  border-color: rgba(245, 208, 66, 0.55);
+  color: var(--aw-yellow);
+}
+
 .aw-topbar__menu-btn {
   display: none;
   width: 36px;
@@ -259,8 +264,51 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .aw-topbar__inner {
+    padding: 0 12px;
+    gap: 8px;
+  }
+  .aw-topbar__brand {
+    gap: 8px;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+  .aw-topbar__brand-text {
+    min-width: 0;
+    overflow: hidden;
+  }
+  .aw-topbar__name {
+    font-size: 0.92rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .aw-topbar__sub {
+    display: none;
+  }
+  .aw-topbar__actions {
+    gap: 6px;
+  }
+  .aw-lang-toggle__btn {
+    height: 30px;
+    padding: 0 7px;
+    font-size: 0.68rem;
+  }
+  .aw-topbar__icon-btn {
+    height: 32px;
+    padding: 0 8px;
+    font-size: 0.82rem;
+    gap: 4px;
+  }
+  .aw-topbar__menu-btn {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 430px) {
+  .aw-topbar__brand-text {
     display: none;
   }
 }

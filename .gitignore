@@ -28,3 +28,7 @@ dist-ssr
 .design-refs/
 docs/DESIGN_SYSTEM.md
 DESIGN_SYSTEM.md
+
+# Private CV exports (may contain phone number) & temporary render HTML
+cv/private/
+cv/*.tmp.html

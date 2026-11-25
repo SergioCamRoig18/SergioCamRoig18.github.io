@@ -375,10 +375,66 @@
 }
 
 @media (max-width: 720px) {
-  .aw-projects-sidebar {
-    grid-template-columns: 1fr;
+  .aw-projects-toolbar {
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .aw-filter-tabs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .aw-filter-tab {
+    min-height: 32px;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--aw-border-subtle);
+  }
+  .aw-filter-tab:nth-child(2n) {
+    border-right-color: transparent;
+  }
+  .aw-filter-tab:nth-last-child(-n + 2) {
+    border-bottom-color: transparent;
+  }
+  .aw-projects-layout {
+    gap: 12px;
   }
   .aw-projects-grid {
+    order: 1;
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .aw-projects-sidebar {
+    order: 2;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .aw-projects-kpi {
+    padding: 9px 8px;
+  }
+  .aw-projects-kpi__val {
+    font-size: 1.35rem;
+  }
+  .aw-projects-meta-box,
+  .aw-projects-status-box {
+    padding: 10px 12px;
+  }
+  .aw-project-card__body {
+    padding: 12px;
+    gap: 7px;
+  }
+  .aw-project-card__title {
+    font-size: 1.22rem;
+  }
+  .aw-project-card__desc {
+    font-size: 0.82rem;
+    line-height: 1.42;
+  }
+  .aw-project-card__footer {
+    padding-top: 8px;
+    font-size: 0.8rem;
+  }
+  .aw-projects-pager {
+    margin-top: 12px;
   }
 }

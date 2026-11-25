@@ -339,16 +339,107 @@
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 640px) {
+  .aw-hero {
+    gap: 12px;
+  }
   .aw-hero-copy {
-    padding: 22px 18px;
+    padding: 16px 14px;
+    gap: 12px;
+  }
+  .aw-hero-top {
+    gap: 8px;
+  }
+  .aw-hero-status {
+    padding: 4px 9px;
+    gap: 7px;
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+  }
+  .aw-hero-greeting {
+    font-size: 0.68rem;
+    margin-top: 2px;
+  }
+  .aw-hero-name {
+    font-size: 2.05rem;
+    line-height: 0.96;
+  }
+  .aw-hero-role {
+    font-size: 1.04rem;
+    line-height: 1.22;
+  }
+  .aw-hero-lead {
+    font-size: 0.88rem;
+    line-height: 1.48;
+    margin-top: 2px;
+  }
+  .aw-hero-pills {
+    gap: 6px;
+  }
+  .aw-hero-pill {
+    padding: 4px 8px;
+    font-size: 0.66rem;
   }
   .aw-hero-actions {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    padding-top: 4px;
   }
-  .aw-hero-actions .aw-btn--primary,
-  .aw-hero-actions .aw-btn--comms {
+  .aw-hero-actions .aw-btn--primary {
     grid-column: 1 / -1;
+  }
+  .aw-portrait-header {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  .aw-portrait-frame {
+    width: 78px;
+  }
+  .aw-portrait-meta__name {
+    font-size: 1.12rem;
+  }
+  .aw-portrait-meta__handle {
+    font-size: 0.7rem;
+  }
+  .aw-portrait-meta__loc {
+    font-size: 0.64rem;
+    margin-top: 2px;
+  }
+  .aw-portrait-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .aw-portrait-fact {
+    padding: 9px 11px;
+    border-right: 1px solid var(--aw-border-subtle);
+  }
+  .aw-portrait-fact:nth-child(2n) {
+    border-right: none;
+  }
+  .aw-portrait-fact:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+  .aw-portrait-fact__lbl {
+    font-size: 0.56rem;
+  }
+  .aw-portrait-fact__val {
+    font-size: 0.86rem;
+    line-height: 1.2;
+  }
+  .aw-portrait-fact__arrow {
+    display: none;
+  }
+  .aw-about-strip {
+    margin-top: 12px;
+    padding: 12px 14px;
+    gap: 6px;
+  }
+  .aw-about-strip__label {
+    font-size: 0.98rem;
+  }
+  .aw-about-strip__text {
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 }
