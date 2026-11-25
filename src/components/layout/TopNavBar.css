@@ -1,0 +1,266 @@
+.aw-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  height: var(--aw-topbar-h);
+  background: rgba(14, 18, 24, 0.82);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  border-bottom: 1px solid var(--aw-border-default);
+}
+
+.aw-topbar__inner {
+  max-width: var(--aw-max-width);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.aw-topbar__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.aw-topbar__monogram {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  color: #11151b;
+  font-family: var(--font-hud);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.aw-topbar__brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.aw-topbar__name {
+  font-family: var(--font-hud);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-text-bright);
+}
+
+.aw-topbar__sub {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-text-muted);
+}
+
+/* Authentic Clan Raids L1 | TAB | TAB | R1 navigation strip */
+.aw-topbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.aw-topbar__tabs {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--aw-border-subtle);
+  background: rgba(28, 33, 41, 0.64);
+}
+
+.aw-topbar__tab {
+  position: relative;
+  height: 34px;
+  padding: 0 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-right: 1px solid var(--aw-border-subtle);
+  font-family: var(--font-hud);
+  font-size: 0.96rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--aw-text-secondary);
+  transition:
+    color var(--aw-fast) var(--aw-ease),
+    background var(--aw-fast) var(--aw-ease),
+    border-color var(--aw-fast) var(--aw-ease);
+}
+
+.aw-topbar__tab:last-child {
+  border-right-color: transparent;
+}
+
+.aw-topbar__tab:hover {
+  color: var(--aw-text-bright);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.aw-topbar__tab[data-active='true'] {
+  color: var(--aw-yellow);
+  background: var(--aw-yellow-wash);
+  border-color: var(--aw-yellow);
+  box-shadow: inset 0 0 0 0.5px var(--aw-yellow);
+  z-index: 1;
+}
+
+.aw-topbar__key-btn {
+  padding: 0;
+  background: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.aw-topbar__key-btn:hover .aw-keycap {
+  background: var(--aw-yellow);
+}
+
+.aw-topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.aw-lang-toggle {
+  display: inline-flex;
+  border: 1px solid var(--aw-border-default);
+  background: rgba(28, 33, 41, 0.72);
+}
+
+.aw-lang-toggle__btn {
+  height: 32px;
+  padding: 0 9px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--aw-text-muted);
+  transition:
+    background var(--aw-fast) var(--aw-ease),
+    color var(--aw-fast) var(--aw-ease);
+}
+
+.aw-lang-toggle__btn[data-active='true'] {
+  background: var(--aw-yellow);
+  color: #11151b;
+}
+
+.aw-topbar__icon-btn {
+  height: 34px;
+  padding: 0 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(34, 40, 50, 0.72);
+  border: 1px solid var(--aw-border-default);
+  font-family: var(--font-hud);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-text-primary);
+  transition:
+    border-color var(--aw-fast) var(--aw-ease),
+    color var(--aw-fast) var(--aw-ease),
+    background var(--aw-fast) var(--aw-ease);
+}
+
+.aw-topbar__icon-btn:hover {
+  border-color: var(--aw-yellow);
+  color: var(--aw-yellow);
+  background: var(--aw-yellow-wash);
+}
+
+.aw-topbar__menu-btn {
+  display: none;
+  width: 36px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(34, 40, 50, 0.72);
+  border: 1px solid var(--aw-border-default);
+  color: var(--aw-text-primary);
+}
+
+/* Mobile drawer */
+.aw-mobile-nav {
+  display: none;
+  border-top: 1px solid var(--aw-border-subtle);
+  background: rgba(12, 16, 22, 0.96);
+  backdrop-filter: blur(16px);
+  padding: 12px 16px 16px;
+}
+
+.aw-mobile-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.aw-mobile-nav__item {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(42, 48, 58, 0.56);
+  border: 1px solid var(--aw-border-subtle);
+  font-family: var(--font-hud);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--aw-text-primary);
+}
+
+.aw-mobile-nav__item[data-active='true'] {
+  border-color: var(--aw-yellow);
+  background: var(--aw-yellow-wash);
+  color: var(--aw-yellow);
+}
+
+@media (max-width: 1180px) {
+  .aw-topbar__tab {
+    padding: 0 11px;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (max-width: 1023px) {
+  .aw-topbar__inner {
+    padding: 0 16px;
+  }
+  .aw-topbar__nav,
+  .aw-topbar__cmd-btn {
+    display: none;
+  }
+  .aw-topbar__menu-btn {
+    display: inline-flex;
+  }
+  .aw-mobile-nav[data-open='true'] {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .aw-topbar__sub {
+    display: none;
+  }
+}

@@ -1,0 +1,354 @@
+/* Human-first CoD: AW Hero Presentation */
+.aw-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.38fr) minmax(290px, 0.78fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.aw-hero-copy {
+  padding: 28px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.aw-hero-top {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aw-hero-status {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 9px;
+  padding: 5px 12px;
+  background: rgba(16, 22, 28, 0.76);
+  border: 1px solid rgba(74, 222, 128, 0.42);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-green);
+}
+
+.aw-hero-greeting {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--aw-text-muted);
+  margin-top: 4px;
+}
+
+.aw-hero-name {
+  margin: 0;
+  font-family: var(--font-hud);
+  font-size: clamp(2.55rem, 4.4vw, 3.75rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 0.98;
+  text-transform: uppercase;
+  color: var(--aw-text-bright);
+}
+
+.aw-hero-role {
+  margin: 0;
+  font-family: var(--font-hud);
+  font-size: clamp(1.18rem, 1.7vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--aw-yellow);
+}
+
+.aw-hero-lead {
+  margin: 4px 0 0;
+  font-size: 1.02rem;
+  line-height: 1.62;
+  color: var(--aw-text-secondary);
+  max-width: 64ch;
+}
+
+.aw-hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.aw-hero-pill {
+  padding: 5px 11px;
+  background: rgba(18, 22, 29, 0.72);
+  border: 1px solid var(--aw-border-default);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--aw-text-primary);
+}
+
+.aw-hero-pill--accent {
+  border-color: rgba(245, 208, 66, 0.45);
+  color: var(--aw-yellow);
+}
+
+.aw-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+.aw-hero-actions .aw-btn--primary {
+  padding: 0 22px;
+}
+
+/* Right Column: Compact Tactical Operator Dossier with Uncropped Portrait */
+.aw-portrait-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.aw-portrait-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 18px 16px;
+  background: linear-gradient(
+    115deg,
+    rgba(20, 25, 33, 0.92) 0%,
+    rgba(30, 37, 48, 0.62) 68%,
+    rgba(245, 208, 66, 0.1) 100%
+  );
+  border-bottom: 1px solid var(--aw-border-default);
+}
+
+.aw-portrait-frame {
+  position: relative;
+  width: 112px;
+  aspect-ratio: 444 / 520;
+  flex-shrink: 0;
+  background: #10141b;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  overflow: hidden;
+}
+
+.aw-portrait-frame__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  filter: brightness(0.95) contrast(1.03);
+}
+
+.aw-portrait-frame__shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 62%, rgba(10, 14, 20, 0.28) 100%);
+}
+
+.aw-portrait-frame__corner {
+  position: absolute;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  border-color: var(--aw-yellow);
+  border-style: solid;
+  border-width: 0;
+  pointer-events: none;
+}
+
+.aw-portrait-frame__corner--tl {
+  top: 5px;
+  left: 5px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+.aw-portrait-frame__corner--tr {
+  top: 5px;
+  right: 5px;
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+.aw-portrait-frame__corner--bl {
+  bottom: 5px;
+  left: 5px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+
+.aw-portrait-frame__corner--br {
+  bottom: 5px;
+  right: 5px;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+.aw-portrait-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.aw-portrait-meta__tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--aw-yellow);
+}
+
+.aw-portrait-meta__name {
+  font-family: var(--font-hud);
+  font-size: 1.32rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.08;
+  text-transform: uppercase;
+  color: var(--aw-text-bright);
+}
+
+.aw-portrait-meta__handle {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--aw-text-secondary);
+  margin-top: 2px;
+}
+
+.aw-portrait-meta__loc {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--aw-text-muted);
+  margin-top: 4px;
+}
+
+.aw-portrait-facts {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.aw-portrait-fact {
+  width: 100%;
+  padding: 11px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--aw-border-subtle);
+  transition: background var(--aw-fast) var(--aw-ease), color var(--aw-fast) var(--aw-ease);
+}
+
+.aw-portrait-fact:last-child {
+  border-bottom: none;
+}
+
+.aw-portrait-fact:hover {
+  background: var(--aw-yellow-wash);
+}
+
+.aw-portrait-fact:hover .aw-portrait-fact__val,
+.aw-portrait-fact:hover .aw-portrait-fact__arrow {
+  color: var(--aw-yellow);
+}
+
+.aw-portrait-fact__lbl {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-text-muted);
+}
+
+.aw-portrait-fact__val {
+  display: block;
+  font-family: var(--font-hud);
+  font-size: 1.04rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--aw-text-primary);
+}
+
+.aw-portrait-fact__arrow {
+  color: var(--aw-text-muted);
+  flex-shrink: 0;
+}
+
+/* Concise human "About Me" strip right below Hero */
+.aw-about-strip {
+  margin-top: 18px;
+  padding: 18px 22px;
+  border-left: 3px solid var(--aw-yellow);
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 18px;
+  align-items: baseline;
+}
+
+.aw-about-strip__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-hud);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--aw-yellow);
+}
+
+.aw-about-strip__label::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: var(--aw-yellow);
+}
+
+.aw-about-strip__text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.62;
+  color: var(--aw-text-secondary);
+}
+
+@media (max-width: 920px) {
+  .aw-hero {
+    grid-template-columns: 1fr;
+  }
+  .aw-about-strip {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 560px) {
+  .aw-hero-copy {
+    padding: 22px 18px;
+  }
+  .aw-hero-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .aw-hero-actions .aw-btn--primary,
+  .aw-hero-actions .aw-btn--comms {
+    grid-column: 1 / -1;
+  }
+}

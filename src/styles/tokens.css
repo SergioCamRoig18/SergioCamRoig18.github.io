@@ -1,0 +1,65 @@
+:root {
+  /* Atmospheric dark canvas */
+  --aw-bg-deep: #0b0e13;
+  --aw-bg-mid: #141922;
+  --aw-bg-bottom: #0d1016;
+
+  /* Smoked frosted glass surfaces (inspired by CoD: AW menus) */
+  --aw-glass-bg: linear-gradient(180deg, rgba(60, 67, 79, 0.54) 0%, rgba(36, 41, 49, 0.64) 100%);
+  --aw-glass-flat: rgba(46, 52, 62, 0.58);
+  --aw-glass-elevated: rgba(54, 62, 74, 0.76);
+  --aw-glass-dark: rgba(18, 22, 28, 0.72);
+  --aw-glass-locked: rgba(28, 33, 40, 0.48);
+
+  /* Crisp 1px architectural borders */
+  --aw-border-subtle: rgba(255, 255, 255, 0.12);
+  --aw-border-default: rgba(255, 255, 255, 0.22);
+  --aw-border-strong: rgba(255, 255, 255, 0.38);
+  --aw-border-rule: rgba(255, 255, 255, 0.62);
+
+  /* Signature CoD: AW Tactical Accents */
+  --aw-yellow: #f5d042;
+  --aw-yellow-soft: rgba(245, 208, 66, 0.22);
+  --aw-yellow-wash: linear-gradient(135deg, rgba(245, 208, 66, 0.24) 0%, rgba(62, 68, 79, 0.62) 72%);
+  --aw-yellow-glow: 0 0 22px rgba(245, 208, 66, 0.14);
+
+  --aw-amber-banner: linear-gradient(
+    90deg,
+    rgba(22, 26, 33, 0.92) 0%,
+    rgba(62, 74, 92, 0.42) 55%,
+    rgba(196, 98, 28, 0.44) 100%
+  );
+  --aw-amber-badge: rgba(154, 94, 42, 0.78);
+  --aw-amber-text: #f3b35a;
+
+  --aw-green: #4ade80;
+  --aw-green-soft: rgba(74, 222, 128, 0.16);
+  --aw-coral: #e05a47;
+  --aw-coral-soft: rgba(224, 90, 71, 0.2);
+
+  /* Text hierarchy */
+  --aw-text-bright: #ffffff;
+  --aw-text-primary: #eef1f5;
+  --aw-text-secondary: #c7d0db;
+  --aw-text-muted: #98a3b3;
+  --aw-text-dim: #6c7686;
+
+  /* Data bars */
+  --aw-bar-track: rgba(0, 0, 0, 0.48);
+  --aw-bar-fill: #d8dee6;
+
+  /* Typography */
+  --font-hud: 'Barlow Condensed', 'Bahnschrift SemiCondensed', 'Arial Narrow', sans-serif;
+  --font-body: 'Barlow', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  /* Layout metrics */
+  --aw-max-width: 1220px;
+  --aw-topbar-h: 58px;
+  --aw-bottombar-h: 40px;
+
+  /* Motion */
+  --aw-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --aw-fast: 140ms;
+  --aw-med: 260ms;
+}

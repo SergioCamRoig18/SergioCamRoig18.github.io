@@ -1,0 +1,314 @@
+/* Chronological overlap layout: parallel 2023-2027 continuous degree track + Recent Clan Intel milestone rail */
+.aw-record-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Continuous 2023-2027 Degree Span Track */
+.aw-degree-span {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 24px;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.aw-degree-span__card {
+  position: sticky;
+  top: calc(var(--aw-topbar-h) + 28px);
+  align-self: start;
+  padding: 18px 18px 20px;
+  background: var(--aw-yellow-wash);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid var(--aw-yellow);
+  box-shadow: var(--aw-yellow-glow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aw-degree-span__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--aw-yellow);
+}
+
+.aw-degree-span__title {
+  margin: 0;
+  font-family: var(--font-hud);
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.08;
+  color: var(--aw-text-bright);
+}
+
+.aw-degree-span__sub {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--aw-green);
+}
+
+.aw-degree-span__desc {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--aw-text-secondary);
+}
+
+.aw-degree-span__range {
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(245, 208, 66, 0.32);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--aw-yellow);
+}
+
+/* Continuous vertical yellow bar showing full 2023 -> 2027 overlap */
+.aw-degree-track {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.aw-degree-track__line {
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--aw-yellow) 0%,
+    rgba(245, 208, 66, 0.72) 70%,
+    rgba(245, 208, 66, 0.35) 100%
+  );
+  box-shadow: 0 0 14px rgba(245, 208, 66, 0.35);
+}
+
+.aw-degree-track__cap {
+  position: relative;
+  z-index: 2;
+  width: 11px;
+  height: 11px;
+  background: var(--aw-yellow);
+  border: 2px solid var(--aw-bg-deep);
+  box-shadow: 0 0 10px rgba(245, 208, 66, 0.75);
+}
+
+.aw-degree-track__cap--top {
+  border-radius: 50%;
+}
+
+/* Right Column: Recent Clan Intel chronological milestone rail */
+.aw-record-rail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-left: 146px;
+}
+
+.aw-record-rail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 122px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.aw-record-entry {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.aw-record-date {
+  position: absolute;
+  left: -146px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 110px;
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--aw-text-muted);
+}
+
+.aw-record-dot {
+  position: absolute;
+  left: -28px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  border: 2px solid var(--aw-bg-deep);
+}
+
+.aw-record-entry:hover .aw-record-dot {
+  background: var(--aw-yellow);
+  box-shadow: 0 0 10px rgba(245, 208, 66, 0.75);
+}
+
+.aw-record-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  text-align: left;
+  padding: 0;
+  overflow: hidden;
+}
+
+.aw-record-card__icon {
+  display: grid;
+  place-items: center;
+  background: rgba(16, 20, 27, 0.65);
+  border-right: 1px solid var(--aw-border-subtle);
+  color: var(--aw-text-secondary);
+}
+
+.aw-record-card:hover .aw-record-card__icon {
+  color: var(--aw-yellow);
+}
+
+.aw-record-card__body {
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.aw-record-card__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.aw-record-card__cat {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--aw-text-muted);
+}
+
+.aw-record-card__badge {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-yellow);
+}
+
+.aw-record-card__title {
+  margin: 0;
+  font-family: var(--font-hud);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.12;
+  color: var(--aw-text-bright);
+}
+
+.aw-record-card__sub {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--aw-green);
+}
+
+.aw-record-card__desc {
+  margin: 2px 0 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--aw-text-secondary);
+}
+
+.aw-record-card__action {
+  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-hud);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-yellow);
+}
+
+@media (max-width: 960px) {
+  .aw-record-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .aw-degree-span {
+    grid-template-columns: 1fr;
+  }
+  .aw-degree-span__card {
+    position: static;
+  }
+  .aw-degree-track {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .aw-record-rail {
+    padding-left: 22px;
+  }
+  .aw-record-rail::before {
+    left: 4px;
+  }
+  .aw-record-entry {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .aw-record-date {
+    position: static;
+    transform: none;
+    width: auto;
+    text-align: left;
+  }
+  .aw-record-dot {
+    left: -22px;
+    top: 8px;
+    transform: none;
+  }
+  .aw-record-card {
+    grid-template-columns: 1fr;
+  }
+  .aw-record-card__icon {
+    display: none;
+  }
+}

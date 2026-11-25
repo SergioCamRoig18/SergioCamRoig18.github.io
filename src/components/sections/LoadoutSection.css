@@ -1,0 +1,318 @@
+/* Exo Upgrade System inspired 3-column schematic + bottom inspector */
+.aw-loadout-schematic {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.aw-loadout-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.aw-cluster-card {
+  position: relative;
+  padding: 14px 16px;
+}
+
+/* Subtle connector leader line toward center core on desktop */
+.aw-cluster-card[data-side='left']::after,
+.aw-cluster-card[data-side='right']::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.aw-cluster-card[data-side='left']::after {
+  right: -19px;
+}
+
+.aw-cluster-card[data-side='right']::before {
+  left: -19px;
+}
+
+.aw-cluster-card__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--aw-border-subtle);
+}
+
+.aw-cluster-card__title {
+  margin: 0;
+  font-family: var(--font-hud);
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-text-bright);
+}
+
+.aw-cluster-card__sub {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--aw-text-muted);
+}
+
+.aw-node-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.aw-tech-node {
+  padding: 10px 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  background: rgba(20, 25, 32, 0.66);
+  border: 1px solid var(--aw-border-subtle);
+  transition:
+    border-color var(--aw-fast) var(--aw-ease),
+    background var(--aw-fast) var(--aw-ease),
+    box-shadow var(--aw-fast) var(--aw-ease);
+}
+
+.aw-tech-node:hover,
+.aw-tech-node[data-selected='true'] {
+  border-color: var(--aw-yellow);
+  background: var(--aw-yellow-wash);
+  box-shadow: inset 0 0 0 0.5px var(--aw-yellow), var(--aw-yellow-glow);
+}
+
+.aw-tech-node__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.aw-tech-node__name {
+  font-family: var(--font-hud);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--aw-text-primary);
+}
+
+.aw-tech-node:hover .aw-tech-node__name,
+.aw-tech-node[data-selected='true'] .aw-tech-node__name {
+  color: var(--aw-yellow);
+}
+
+.aw-tech-node__diamond {
+  width: 7px;
+  height: 7px;
+  transform: rotate(45deg);
+  background: rgba(255, 255, 255, 0.28);
+  flex-shrink: 0;
+}
+
+.aw-tech-node[data-selected='true'] .aw-tech-node__diamond,
+.aw-tech-node[data-maturity='core'] .aw-tech-node__diamond {
+  background: var(--aw-yellow);
+}
+
+.aw-tech-node__bars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+.aw-tech-node__bar {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.aw-tech-node__bar[data-filled='true'] {
+  background: rgba(196, 108, 42, 0.85);
+}
+
+.aw-tech-node[data-selected='true'] .aw-tech-node__bar[data-filled='true'] {
+  background: var(--aw-yellow);
+}
+
+/* Central Tactical Core Node */
+.aw-loadout-core {
+  position: relative;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  min-height: 220px;
+  background: radial-gradient(circle at center, rgba(245, 208, 66, 0.14) 0%, rgba(28, 34, 42, 0.72) 72%);
+  border: 1px solid var(--aw-border-strong);
+}
+
+.aw-loadout-core__ring {
+  width: 76px;
+  height: 76px;
+  border: 1.5px solid var(--aw-yellow);
+  display: grid;
+  place-items: center;
+  background: rgba(14, 18, 24, 0.86);
+  color: var(--aw-yellow);
+}
+
+.aw-loadout-core__label {
+  font-family: var(--font-hud);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--aw-text-bright);
+}
+
+.aw-loadout-core__count {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--aw-yellow);
+}
+
+/* Bottom Inspector (Exact Exo Upgrade System RESISTANCE panel) */
+.aw-inspector {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr) auto;
+  gap: 0;
+  border: 1px solid var(--aw-border-strong);
+  background: rgba(28, 34, 43, 0.78);
+  backdrop-filter: blur(14px);
+}
+
+.aw-inspector__emblem {
+  display: grid;
+  place-items: center;
+  border-right: 1px solid var(--aw-border-subtle);
+  background: rgba(16, 20, 27, 0.7);
+  color: var(--aw-yellow);
+}
+
+.aw-inspector__body {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aw-inspector__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.aw-inspector__name {
+  margin: 0;
+  font-family: var(--font-hud);
+  font-size: 1.48rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--aw-text-bright);
+}
+
+.aw-inspector__tier {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-yellow);
+}
+
+.aw-inspector__desc {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--aw-text-secondary);
+}
+
+.aw-inspector__proof {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--aw-green);
+}
+
+.aw-inspector__milestones {
+  margin-top: 4px;
+  padding-top: 10px;
+  border-top: 1px solid var(--aw-border-subtle);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.aw-milestone {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--aw-text-dim);
+}
+
+.aw-milestone[data-reached='true'] {
+  color: var(--aw-text-secondary);
+}
+
+.aw-milestone[data-current='true'] {
+  color: var(--aw-green);
+  font-weight: 700;
+}
+
+.aw-inspector__cta {
+  padding: 16px 20px;
+  border-left: 1px solid var(--aw-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1023px) {
+  .aw-loadout-schematic {
+    grid-template-columns: 1fr;
+  }
+  .aw-cluster-card[data-side='left']::after,
+  .aw-cluster-card[data-side='right']::before,
+  .aw-loadout-core {
+    display: none;
+  }
+  .aw-inspector {
+    grid-template-columns: 1fr;
+  }
+  .aw-inspector__emblem {
+    display: none;
+  }
+  .aw-inspector__cta {
+    border-left: none;
+    border-top: 1px solid var(--aw-border-subtle);
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .aw-node-grid {
+    grid-template-columns: 1fr;
+  }
+}

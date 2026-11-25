@@ -1,0 +1,384 @@
+.aw-projects-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.aw-filter-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--aw-border-subtle);
+  background: rgba(24, 29, 36, 0.72);
+}
+
+.aw-filter-tab {
+  min-height: 36px;
+  padding: 0 18px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-right: 1px solid var(--aw-border-subtle);
+  font-family: var(--font-hud);
+  font-size: 0.96rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--aw-text-secondary);
+  transition:
+    border-color var(--aw-fast) var(--aw-ease),
+    background var(--aw-fast) var(--aw-ease),
+    color var(--aw-fast) var(--aw-ease);
+}
+
+.aw-filter-tab:last-child {
+  border-right-color: transparent;
+}
+
+.aw-filter-tab:hover {
+  color: var(--aw-text-bright);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.aw-filter-tab[data-active='true'] {
+  border-color: var(--aw-yellow);
+  background: var(--aw-yellow-wash);
+  color: var(--aw-yellow);
+  z-index: 1;
+}
+
+.aw-tech-chip-active {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 12px;
+  background: rgba(245, 208, 66, 0.14);
+  border: 1px solid var(--aw-yellow);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--aw-yellow);
+}
+
+.aw-projects-layout {
+  display: grid;
+  grid-template-columns: 235px minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.aw-projects-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aw-projects-kpis {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.aw-projects-kpi {
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.aw-projects-kpi__lbl {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-text-muted);
+}
+
+.aw-projects-kpi__val {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-hud);
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--aw-text-bright);
+}
+
+.aw-projects-kpi__val--yellow {
+  color: var(--aw-yellow);
+}
+
+.aw-projects-meta-box {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aw-projects-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.84rem;
+  color: var(--aw-text-muted);
+}
+
+.aw-projects-meta-row strong {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--aw-text-bright);
+}
+
+.aw-projects-meta-row strong.green {
+  color: var(--aw-green);
+}
+
+.aw-projects-status-box {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.aw-projects-status-box__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--aw-green);
+}
+
+.aw-projects-status-box__head--info {
+  color: var(--aw-yellow);
+}
+
+.aw-projects-status-box__text {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--aw-text-secondary);
+}
+
+/* Clan Raids 3-column tactical project grid */
+.aw-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.aw-project-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.aw-project-card__media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  background: #10141b;
+  border-bottom: 1px solid var(--aw-border-subtle);
+  overflow: hidden;
+}
+
+.aw-project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.86) contrast(1.04);
+  transition: transform 0.35s var(--aw-ease), filter 0.25s var(--aw-ease);
+}
+
+.aw-project-card:hover .aw-project-card__media img {
+  transform: scale(1.03);
+  filter: brightness(1) contrast(1.05);
+}
+
+.aw-project-card__badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 5;
+  padding: 3px 8px;
+  background: rgba(12, 16, 22, 0.9);
+  border: 1px solid var(--aw-border-default);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-text-primary);
+}
+
+.aw-project-card__index {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 5;
+  padding: 3px 7px;
+  background: rgba(12, 16, 22, 0.9);
+  border: 1px solid rgba(245, 208, 66, 0.45);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--aw-yellow);
+}
+
+.aw-project-card__body {
+  padding: 14px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.aw-project-card__title {
+  margin: 0;
+  font-family: var(--font-hud);
+  font-size: 1.38rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  color: var(--aw-text-bright);
+}
+
+.aw-project-card__desc {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.48;
+  color: var(--aw-text-secondary);
+  flex: 1;
+}
+
+/* Segmented Scope/Maturity bar (Clan Raids Difficulty aesthetic) */
+.aw-maturity-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.aw-maturity-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--aw-text-muted);
+}
+
+.aw-maturity-segments {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.aw-maturity-seg {
+  width: 18px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.aw-maturity-seg[data-filled='true'] {
+  background: var(--aw-text-bright);
+}
+
+.aw-project-card:hover .aw-maturity-seg[data-filled='true'] {
+  background: var(--aw-yellow);
+}
+
+.aw-project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.aw-project-tag {
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  font-weight: 600;
+  color: var(--aw-green);
+}
+
+.aw-project-card__footer {
+  margin-top: 2px;
+  padding-top: 10px;
+  border-top: 1px solid var(--aw-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-hud);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-text-muted);
+}
+
+.aw-project-card:hover .aw-project-card__footer {
+  color: var(--aw-yellow);
+}
+
+/* Clan Raids segmented pagination strip at bottom */
+.aw-projects-pager {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aw-projects-pager__bar {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.aw-projects-pager__seg {
+  width: 42px;
+  height: 4px;
+  background: var(--aw-yellow);
+}
+
+.aw-projects-pager__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--aw-yellow);
+}
+
+.aw-projects-empty {
+  padding: 28px;
+  text-align: center;
+  color: var(--aw-text-secondary);
+}
+
+@media (max-width: 1120px) {
+  .aw-projects-layout {
+    grid-template-columns: 1fr;
+  }
+  .aw-projects-sidebar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .aw-projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .aw-projects-sidebar {
+    grid-template-columns: 1fr;
+  }
+  .aw-projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

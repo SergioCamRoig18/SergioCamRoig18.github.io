@@ -1,0 +1,459 @@
+.aw-vis {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(245, 208, 66, 0.14) 0%, transparent 56%),
+    radial-gradient(circle at 18% 82%, rgba(86, 114, 152, 0.22) 0%, transparent 58%),
+    linear-gradient(155deg, #10141b 0%, #19202a 55%, #0d1016 100%);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.aw-vis--card {
+  padding: 40px 14px 12px;
+  justify-content: center;
+}
+
+.aw-vis--logo-card {
+  padding: 36px 18px 14px;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 54%, rgba(30, 168, 224, 0.24) 0%, transparent 56%),
+    radial-gradient(circle at 82% 20%, rgba(245, 208, 66, 0.08) 0%, transparent 50%),
+    linear-gradient(155deg, #0e131b 0%, #151e2b 52%, #0c1017 100%);
+}
+
+.aw-vis__logo-wrap {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aw-vis__logo-img {
+  max-height: 118px;
+  max-width: 72%;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 8px 22px rgba(0, 140, 220, 0.32)) !important;
+  transition: transform 0.3s var(--aw-ease), filter 0.25s var(--aw-ease);
+}
+
+.aw-project-card:hover .aw-vis__logo-img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 10px 28px rgba(0, 174, 240, 0.48)) !important;
+}
+
+/* GitHub HUD Engine tactical reticle emblem (card & modal) */
+.aw-vis--hud-card {
+  padding: 36px 18px 14px;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 50% 52%, rgba(245, 208, 66, 0.2) 0%, transparent 56%),
+    radial-gradient(circle at 18% 82%, rgba(86, 114, 152, 0.18) 0%, transparent 52%),
+    linear-gradient(155deg, #0f131a 0%, #181d26 52%, #0c0f15 100%);
+}
+
+.aw-vis__hud-wrap {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.aw-vis__hud-label {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245, 208, 66, 0.9);
+}
+
+.aw-gh-emblem {
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: rgba(16, 20, 27, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.42);
+  transition: transform 0.3s var(--aw-ease), box-shadow 0.25s var(--aw-ease), border-color 0.25s var(--aw-ease);
+}
+
+.aw-gh-emblem--card {
+  width: 78px;
+  height: 78px;
+}
+
+.aw-gh-emblem--card .aw-gh-emblem__icon {
+  width: 42px;
+  height: 42px;
+  filter: drop-shadow(0 0 12px rgba(245, 208, 66, 0.26));
+}
+
+.aw-project-card:hover .aw-gh-emblem--card {
+  transform: scale(1.06);
+  border-color: rgba(245, 208, 66, 0.55);
+  box-shadow: 0 10px 28px rgba(245, 208, 66, 0.22);
+}
+
+.aw-gh-emblem--modal {
+  width: 72px;
+  height: 72px;
+}
+
+.aw-gh-emblem--modal .aw-gh-emblem__icon {
+  width: 38px;
+  height: 38px;
+  filter: drop-shadow(0 0 10px rgba(245, 208, 66, 0.24));
+}
+
+.aw-gh-emblem__corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: var(--aw-yellow);
+  border-style: solid;
+  border-width: 0;
+}
+
+.aw-gh-emblem__corner--tl {
+  top: -1px;
+  left: -1px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+.aw-gh-emblem__corner--tr {
+  top: -1px;
+  right: -1px;
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+.aw-gh-emblem__corner--bl {
+  bottom: -1px;
+  left: -1px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+
+.aw-gh-emblem__corner--br {
+  bottom: -1px;
+  right: -1px;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+.aw-vis--hud-modal {
+  padding: 18px 20px;
+  background:
+    radial-gradient(circle at 50% 16%, rgba(245, 208, 66, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 18% 82%, rgba(86, 114, 152, 0.18) 0%, transparent 52%),
+    linear-gradient(155deg, #0f131a 0%, #171d26 55%, #0d1016 100%);
+}
+
+.aw-vis--modal.aw-vis--hud-modal .aw-vis__inner {
+  gap: 8px;
+}
+
+.aw-vis--hud-modal .aw-vis-pipe {
+  gap: 8px;
+}
+
+.aw-vis--hud-modal .aw-vis-stage {
+  padding: 8px 10px;
+}
+
+.aw-vis__modal-emblem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 4px;
+}
+
+.aw-vis--modal {
+  min-height: 290px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.aw-vis--votify-modal {
+  padding: 18px 20px;
+  background:
+    radial-gradient(circle at 50% 16%, rgba(30, 168, 224, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 82% 76%, rgba(245, 208, 66, 0.1) 0%, transparent 52%),
+    linear-gradient(155deg, #0f141c 0%, #171f2b 55%, #0d1016 100%);
+}
+
+.aw-vis--modal.aw-vis--votify-modal .aw-vis__inner {
+  gap: 8px;
+}
+
+.aw-vis--votify-modal .aw-vis-layers {
+  gap: 7px;
+}
+
+.aw-vis--votify-modal .aw-vis-layer {
+  padding: 7px 11px;
+}
+
+.aw-vis__modal-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 4px;
+}
+
+.aw-vis__modal-logo img {
+  height: 108px;
+  max-height: 108px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 18px rgba(0, 150, 224, 0.36));
+}
+
+.aw-vis__grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 17v6M17 20h6' stroke='rgba(255,255,255,0.10)' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+}
+
+.aw-vis__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+}
+
+.aw-vis--modal .aw-vis__inner {
+  gap: 11px;
+}
+
+.aw-vis__caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.42);
+  padding-top: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--aw-yellow);
+}
+
+/* Compact 16:9 card poster layout (zero clipping, zero badge collision) */
+.aw-vis-compact-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.aw-vis-compact-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 9px;
+  background: rgba(16, 20, 27, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-left: 3px solid var(--aw-border-strong);
+}
+
+.aw-vis-compact-row--yellow {
+  border-left-color: var(--aw-yellow);
+  border-color: rgba(245, 208, 66, 0.42);
+  background: rgba(34, 39, 48, 0.84);
+}
+
+.aw-vis-compact-row--green {
+  border-left-color: var(--aw-green);
+}
+
+.aw-vis-compact-row__title {
+  font-family: var(--font-hud);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--aw-text-bright);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.aw-vis-compact-row__tag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--aw-yellow);
+  white-space: nowrap;
+}
+
+.aw-vis-compact-pipe {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.aw-vis-compact-node {
+  padding: 7px 9px;
+  background: rgba(16, 20, 27, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.aw-vis-compact-node--accent {
+  border-color: rgba(245, 208, 66, 0.5);
+  background: rgba(38, 43, 52, 0.84);
+}
+
+.aw-vis-compact-node__step {
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--aw-yellow);
+}
+
+.aw-vis-compact-node__title {
+  font-family: var(--font-hud);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--aw-text-bright);
+  line-height: 1.1;
+}
+
+/* Detailed modal layouts */
+.aw-vis-layers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aw-vis-layer {
+  padding: 9px 12px;
+  background: rgba(18, 23, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-left: 3px solid var(--aw-border-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.aw-vis-layer--yellow {
+  border-left-color: var(--aw-yellow);
+  border-color: rgba(245, 208, 66, 0.45);
+  background: rgba(34, 39, 48, 0.84);
+}
+
+.aw-vis-layer--green {
+  border-left-color: var(--aw-green);
+}
+
+.aw-vis-layer__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-family: var(--font-hud);
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--aw-text-bright);
+}
+
+.aw-vis-layer__tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--aw-yellow);
+}
+
+.aw-vis-layer__items {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.38;
+  color: var(--aw-text-secondary);
+}
+
+.aw-vis-pipe {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.aw-vis-stage {
+  padding: 10px 12px;
+  background: rgba(18, 23, 30, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.aw-vis-stage--accent {
+  border-color: rgba(245, 208, 66, 0.55);
+  background: rgba(42, 46, 54, 0.84);
+}
+
+.aw-vis-stage__step {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--aw-yellow);
+}
+
+.aw-vis-stage__title {
+  font-family: var(--font-hud);
+  font-size: 1.04rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--aw-text-bright);
+  line-height: 1.1;
+}
+
+.aw-vis-stage__sub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  line-height: 1.35;
+  color: var(--aw-text-muted);
+}
+
+.aw-vis-pipe__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: rgba(16, 20, 26, 0.88);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--aw-green);
+}
