@@ -108,7 +108,7 @@ const CV_CONTENT = {
         org: 'Town Council of Anna',
         role: 'Visitor Access & Ticketing Staff (Temporary Staff)',
         location: 'Anna, Valencia',
-        period: 'Mar & Aug–Sep 2024',
+        period: 'Apr & Sep–Oct 2024',
         bullets: [
           'Managed entry ticketing, daily cash reconciliation, and high-volume visitor assistance at Albufera de Anna Natural Park, maintaining accuracy, reliability, and composure during peak-season days.',
         ],
@@ -204,7 +204,7 @@ const CV_CONTENT = {
         org: 'Ayuntamiento de Anna',
         role: 'Control de Accesos y Atención al Visitante (Personal Interino)',
         location: 'Anna, Valencia',
-        period: 'Mar y Ago–Sep 2024',
+        period: 'Abr y Sep–Oct 2024',
         bullets: [
           'Gestión de taquilla, cobro de entradas, cuadre diario de caja y atención al público en jornadas de alta afluencia en el paraje natural de la Albufera de Anna, manteniendo precisión y calma bajo presión.',
         ],
@@ -232,7 +232,7 @@ function renderHtml(lang, phone) {
   const contactRow2 = [
     `<a href="https://sergiocamroig18.github.io">sergiocamroig18.github.io</a>`,
     `<a href="https://github.com/SergioCamRoig18">github.com/SergioCamRoig18</a>`,
-    `<a href="https://www.linkedin.com/in/sergio-camacho-roig-343550318/">linkedin.com/in/sergio-camacho-roig</a>`,
+    `<a href="https://www.linkedin.com/in/sergio-camacho-roig/">linkedin.com/in/sergio-camacho-roig</a>`,
   ];
 
   const projectsHtml = c.projects
